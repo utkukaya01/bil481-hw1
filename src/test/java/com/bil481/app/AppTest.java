@@ -12,11 +12,11 @@ public class AppTest {
     @Test
     public void testValidInput() {
         ArrayList<Integer> integerList = new ArrayList<>(Arrays.asList(21, 20, 11, 21, 5, 13, 25, 16));
-        int[] changeList = {26, 52, 78, 0, 0, 104, -7, 15};
+        int[] changeArray = {26, 52, 78, 0, 0, 104, -7, 15};
         int wordCount = 2;
         int[] wordLengths = {4, 4};
 
-        String result = App.decipher(integerList, changeList, wordCount, wordLengths);
+        String result = App.decipher(integerList, changeArray, wordCount, wordLengths);
 
         assertNotNull(result);
         assertEquals("utku emre", result);
@@ -25,11 +25,11 @@ public class AppTest {
     @Test
     public void testInvalidWordCount() {
         ArrayList<Integer> integerList = new ArrayList<>(Arrays.asList(2, 7, 12, 1, 15, 8));
-        int[] changeList = {3, 5, 1, 7, 2, 4};
+        int[] changeArray = {3, 5, 1, 7, 2, 4};
         int wordCount = 4;
         int[] wordLengths = {3, 3};
 
-        String result = App.decipher(integerList, changeList, wordCount, wordLengths);
+        String result = App.decipher(integerList, changeArray, wordCount, wordLengths);
 
         assertNull(result);
     }
@@ -37,11 +37,11 @@ public class AppTest {
     @Test
     public void testInvalidSumOfWordLengths() {
         ArrayList<Integer> integerList = new ArrayList<>(Arrays.asList(2, 7, 12, 1, 15, 8));
-        int[] changeList = {3, 5, 1, 7, 2, 4};
+        int[] changeArray = {3, 5, 1, 7, 2, 4};
         int wordCount = 2;
         int[] wordLengths = {5, 2};
 
-        String result = App.decipher(integerList, changeList, wordCount, wordLengths);
+        String result = App.decipher(integerList, changeArray, wordCount, wordLengths);
 
         assertNull(result);
     }
@@ -49,11 +49,11 @@ public class AppTest {
     @Test
     public void testInvalidOfSumLessThanOne() {
         ArrayList<Integer> integerList = new ArrayList<>(Arrays.asList(2, 7, 12, 1, 15, 8));
-        int[] changeList = {3, -10, 1, 7, 2, 4};
+        int[] changeArray = {3, -10, 1, 7, 2, 4};
         int wordCount = 2;
         int[] wordLengths = {3, 3};
 
-        String result = App.decipher(integerList, changeList, wordCount, wordLengths);
+        String result = App.decipher(integerList, changeArray, wordCount, wordLengths);
 
         assertNull(result);
     }
@@ -61,11 +61,11 @@ public class AppTest {
     @Test
     public void testEmptyInput() {
         ArrayList<Integer> integerList = new ArrayList<>();
-        int[] changeList = {};
+        int[] changeArray = {};
         int wordCount = 0;
         int[] wordLengths = {};
 
-        String result = App.decipher(integerList, changeList, wordCount, wordLengths);
+        String result = App.decipher(integerList, changeArray, wordCount, wordLengths);
 
         assertNull(result);
     }
