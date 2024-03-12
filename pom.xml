@@ -31,7 +31,7 @@
           <appendAssemblyId>false</appendAssemblyId>
           <archive>
             <manifest>
-              <mainClass>com.bil481-hw1.app.App</mainClass>
+              <mainClass>com.bil481.app.App</mainClass>
             </manifest>
           </archive>
         </configuration>
